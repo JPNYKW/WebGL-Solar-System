@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>WebGL - Solar System</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<canvas id="webgl-canvas"></canvas>
+		</div>
+        
+        <div class="status-menu">
+            <h1>Controller</h1>
+            <div class="line"></div>
+            
+            <p>time speed</p>
+            <input type="range" value=1 min=0 max=100 id="speed">
+            
+            <p>camera x</p>
+            <input type="range" value=0 min=-50000 max=50000 id="camera-x">
+            
+            <p>camera y</p>
+            <input type="range" value=27000 min=-50000 max=50000 id="camera-y">
+            
+            <p>camera z</p>
+            <input type="range" value=21000 min=-50000 max=50000 id="camera-z">
+            
+            <p>Look at Sun</p>
+            <input type="checkbox" checked="checked" id="is-look-at-sun">
+            
+            <p>View the log</p>
+            <input type="checkbox" checked="checked" id="view-log">
+        </div>
+		
+        <div class="load-log">
+            <textarea id="log-output" readonly>Loading</textarea>
+        </div>
+        
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+		<script src="solar_system.js"></script>
+        
+	</body>
+</html>
